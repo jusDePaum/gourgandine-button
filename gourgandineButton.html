@@ -1,0 +1,38 @@
+<div class="gourgandine">
+    <img src="https://i.imgur.com/6L1TG9V.png" alt="Gourgandine button" id="gourgandine" class="gourgandine" onclick="gourgandine()"/>
+</div>
+<img src="https://i.imgur.com/6L1TG9V.png" alt="Not working..." id="xl_gourgandine" class="xl_gourgandine close" onclick="gourgandine()"/>
+
+<script>
+
+    function gourgandine() {
+        console.log("Gourgandine button clicked");
+        document.getElementById("xl_gourgandine").classList.toggle("close");
+    }
+
+</script>
+
+<style>
+    .gourgandine {
+        display: inline;
+        height: 50px;
+        width: 50px;
+    }
+    .gourgandine:hover {
+        cursor: pointer;
+    }
+    .xl_gourgandine {
+        display: inline;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-inline: auto;
+        transition: all 1s;
+    }
+    .close {
+        /*display: none;*/
+        bottom: 100%;
+    }
+</style>
